@@ -1,4 +1,22 @@
 spring:
+  application:
+    name: order
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1/springcloud_sell?characterEncoding=UTF-8&useSLL=false
   cloud:
     config:
-    
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
+env: test5
+girl:
+  name: qingqing
+  age: 21
